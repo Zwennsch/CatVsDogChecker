@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
             ),
             Text(
               "Sven Schröder",
-              style: TextStyle(color: Colors.redAccent, fontSize: 20.0),
+              style: TextStyle(color: Colors.white, fontSize: 20.0),
             ),
             SizedBox(
               height: 20,
@@ -30,12 +30,12 @@ class _HomeState extends State<Home> {
             Text(
               "Cat vs Dog Analyzer",
               style: TextStyle(
-                  color: Colors.redAccent,
+                  color: Colors.white,
                   fontWeight: FontWeight.w500,
                   fontSize: 30),
             ),
             SizedBox(
-              height: 30,
+              height: 50,
             ),
             Center(
               child: (_loading
@@ -55,7 +55,58 @@ class _HomeState extends State<Home> {
                     )
                   : Container()),
             ),
-            Container(width: MediaQuery.of(context).size.width, child: Column(),)
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      width: MediaQuery.of(context).size.width - 250,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.yellowAccent,
+                          borderRadius: BorderRadius.circular(6)),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: Text(
+                        "Capture of Photo",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      width: MediaQuery.of(context).size.width - 250,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.yellowAccent,
+                          borderRadius: BorderRadius.circular(6)),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: Text(
+                        "Select a Photo",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
